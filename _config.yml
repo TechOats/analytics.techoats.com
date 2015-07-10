@@ -16,16 +16,16 @@ exclude:
 - ".sass-cache"
 
 # Site metadata
-title: "analytics.usa.gov | The US government's web traffic."
-description: "Official data on web traffic to hundreds of US federal government websites. Published by the Digital Analytics Program."
+title: "analytics.techoats.com | How many oats?"
+description: "Testing and tinkering"
 
 # site's own URL, and data root
-url: https://analytics.usa.gov
-data_url: https://analytics.usa.gov/data/live
+url: https://analytics.techoats.com
+data_url: https://analytics.techoats.com/data
 
 # GitHub information
-org_name: GSA
-repo_name: analytics.usa.gov
+org_name: snowulf
+repo_name: test
 
 # twitter information
-twitter: usgsa
+twitter: techoats

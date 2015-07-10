@@ -5,31 +5,10 @@ permalink: /
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-    <!--
-
-    Hi! Welcome to our source code.
-
-    This dashboard uses data from the Digital Analytics Program, a US
-    government team inside the General Services Administration, an independent
-    federal agency.
-
-
-    For a detailed tech breakdown of how 18F and friends built this site:
-
-    https://18f.gsa.gov/2015/03/19/how-we-built-analytics-usa-gov/
-
-
-    This is a fully open source project, and your contributions are welcome.
-
-    Frontend static site: https://github.com/GSA/analytics.usa.gov
-    Backend data reporting: https://github.com/18F/analytics-reporter
-
-    -->
-
+    <!-- Code available at https://github.com/TechOats/analytics.techoats.com -->
+    <!-- Forked from https://github.com/GSA/analytics.usa.gov -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="google-site-verification" content="NjbZn6hQe7OwV-nTsa6nLmtrOUcSGPRyFjxm5zkmCcg" />
 
     <link rel="stylesheet" href="/css/public_analytics.css">
 
@@ -64,33 +43,13 @@ permalink: /
 
     <header id="usa_dot_gov_header">
       <div class="header_container">
-        <h1>analytics<a href="http://www.usa.gov">.usa.gov</a></h1>
+        <h1>analytics<a href="https://techoats.com">.techoats.com</a></h1>
         <a id="about" href="#explanation">About this site</a>
       </div>
       <div id="color_bar"></div>
     </header>
 
     <div class="container">
-      <!--
-      JavaScript block hooks look for any element with both data-block and
-      data-source attributes:
-
-      <section data-block="users" data-source="path/to/data.json">
-        The "loading", "loaded", and "error" classes are set on this element
-        the data-source URL is loaded. Then the renderer is called on the first
-        child of the block with the "data" class:
-
-        <div class="data">
-        </div>
-
-        Some renderers expect to be called on HTML tables, in which
-        case you would use:
-
-        <table class="data">
-        </table>
-
-      </section>
-      -->
 
       <div id="main_data">
         <section id="realtime"
@@ -98,7 +57,7 @@ permalink: /
           data-source="{{ site.data_url }}/realtime.json"
           data-refresh="15">
           <h2 id="current_visitors" class="data">...</h2>
-          <div class="chart_subtitle">people on government websites now</div>
+          <div class="chart_subtitle">people eating their now</div>
         </section>
 
         <section class="section_headline visits_today">
@@ -299,20 +258,13 @@ permalink: /
     </div>
   </body>
 
-
-  <!--
-    IE detection, used to guide console formatting in subsequent include.
-  -->
   <script type="text/javascript">window._ie9 = false;</script>
 
   <!--[if IE 9 ]>
     <script type="text/javascript">window._ie9 = true;</script>
   <![endif]-->
 
-  <!--
-   IE10 JS targeting: https://stackoverflow.com/a/17099988
-   IE11 JS targeting: https://stackoverflow.com/a/17447695
-  -->
+
   <script type="text/javascript">
     window._ie10 = ("onpropertychange" in document && !!window.matchMedia);
     window._ie11 = !!navigator.userAgent.match(/Trident\/7.0; rv 11/);
@@ -321,6 +273,4 @@ permalink: /
 
   <script src="/js/index.js"></script>
 
-  <!-- report to oneself -->
-  <script id="_fed_an_ua_tag" src="https://analytics.usa.gov/dap/dap.min.js"></script>
 </html>
