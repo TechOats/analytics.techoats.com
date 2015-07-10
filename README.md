@@ -1,6 +1,6 @@
-## analytics.usa.gov
+## analytics.techoats.com
 
-A project to publish website analytics for the US federal government.
+A project to borrow analytics.usa.gov code base for TechOats
 
 ### Setup
 
@@ -59,14 +59,10 @@ The data will be available at `http://localhost:3000` over CORS, with no path pr
 
 ### Deploying the app to production
 
-In production, the site's base URL is set to `https://analytics.usa.gov` and the data's base URL is set to `https://analytics.usa.gov/data/live`.
-
-To deploy this app to `analytics.usa.gov`, you will need authorized access to 18F's Amazon S3 bucket for the project.
-
-To deploy the site using `s3cmd`, production settings, and a **5 minute cache time**, run:
+In production, the site's base URL is set to `https://analytics.techoats` and the data's base URL is set to `https://analytics.techoats.com/data`.
 
 ```bash
-make production && s3cmd put --recursive -P --add-header="Cache-Control:max-age=300" _site/* s3://18f-dap/
+make production && s3cmd put --recursive -P -f --rr --add-header="Cache-Control:max-age=300" _site/* s3://S3_BUCKET_HERE/
 ```
 
 **Use the full command above.** The full command ensures that the build completes successfully, with production settings, _before_ triggering an upload to the production bucket.
@@ -76,6 +72,8 @@ make production && s3cmd put --recursive -P --add-header="Cache-Control:max-age=
 Links pulled directly from Google Analytics are occasionally broken (this is most common in the Top 20 section). For now, we're hard coding the fix in the `index.js` file [here](https://github.com/GSA/analytics.usa.gov/blob/master/js/index.js#L6) in the format: `"broken link" : "working link",`.
 
 ### Public domain
+
+Code forked from https://github.com/GSA/analytics.usa.gov
 
 This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
 
